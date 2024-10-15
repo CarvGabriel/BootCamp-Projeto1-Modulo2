@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
 
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/quantity.css">
+
 </head>
 <body>
     <div class="container">
@@ -34,8 +36,13 @@
                         <div class="price">
                             R$ 30,00
                         </div>
-                        <div>
-
+                        <div class="quantity-container">
+                            <div class="quantity buttons_added">
+                                <input type="button" value="-" class="minus">
+                                <input type="number" step="1" min="0" max="" id="1" name="quantity" value="0" title="Qty"
+                                    class="input-text qty text" size="4" pattern="" inputmode="">
+                                <input type="button" value="+" class="plus">
+                            </div>
                         </div>
                     </div>
                     <div class="choice">
@@ -48,8 +55,13 @@
                         <div class="price">
                             R$ 25,00
                         </div>
-                        <div>
-                            
+                        <div class="quantity-container">
+                            <div class="quantity buttons_added">
+                                <input type="button" value="-" class="minus">
+                                <input type="number" step="1" min="0" max="" id="2" name="quantity" value="0" title="Qty"
+                                    class="input-text qty text" size="4" pattern="" inputmode="">
+                                <input type="button" value="+" class="plus">
+                            </div>
                         </div>
                     </div>
                     <div class="choice">
@@ -62,8 +74,13 @@
                         <div class="price">
                             R$ 22,00
                         </div>
-                        <div>
-                            
+                        <div class="quantity-container">
+                            <div class="quantity buttons_added">
+                                <input type="button" value="-" class="minus">
+                                <input type="number" step="1" min="0" max="" id="3" name="quantity" value="0" title="Qty"
+                                    class="input-text qty text" size="4" pattern="" inputmode="">
+                                <input type="button" value="+" class="plus">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -88,8 +105,13 @@
                         <div class="price">
                             R$ 10,00
                         </div>
-                        <div>
-
+                        <div class="quantity-container">
+                            <div class="quantity buttons_added">
+                                <input type="button" value="-" class="minus">
+                                <input type="number" step="1" min="0" max="" id="4" name="quantity" value="0" title="Qty"
+                                    class="input-text qty text" size="4" pattern="" inputmode="">
+                                <input type="button" value="+" class="plus">
+                            </div>
                         </div>
                     </div>
                     <div class="choice">
@@ -102,8 +124,13 @@
                         <div class="price">
                             R$ 8,00
                         </div>
-                        <div>
-                            
+                        <div class="quantity-container">
+                            <div class="quantity buttons_added">
+                                <input type="button" value="-" class="minus">
+                                <input type="number" step="1" min="0" max="" id="5" name="quantity" value="0" title="Qty"
+                                    class="input-text qty text" size="4" pattern="" inputmode="">
+                                <input type="button" value="+" class="plus">
+                            </div>
                         </div>
                     </div>
                     <div class="choice">
@@ -116,8 +143,13 @@
                         <div class="price">
                             R$ 12,00
                         </div>
-                        <div>
-                            
+                        <div class="quantity-container">
+                            <div class="quantity buttons_added">
+                                <input type="button" value="-" class="minus">
+                                <input type="number" step="1" min="0" max="" id="6" name="quantity" value="0" title="Qty"
+                                    class="input-text qty text" size="4" pattern="" inputmode="">
+                                <input type="button" value="+" class="plus">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -148,6 +180,7 @@
     </div>
     <script src="js/jquery-3.6.0.min.js"> </script>
     <script src="js/jquery.mask.min.js"> </script>
+    <script src="js/quantity.js"> </script>
     <script>
         $("#phone").mask("(99) 9999-99999");
     </script>

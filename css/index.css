@@ -1,3 +1,4 @@
+
 body{
     background-color: #C5C1C0;
     font-family: Arial, Helvetica, sans-serif;
@@ -63,4 +64,10 @@ img {
     height: auto;
     margin: auto;
     margin-top: 10px;
+}
+
+.quantity-container{
+    width: 60%;
+    margin: auto;
+    margin-bottom: 10px;
 }
