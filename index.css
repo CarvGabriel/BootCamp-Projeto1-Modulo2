@@ -10,6 +10,7 @@ body{
     text-align: center;
     box-shadow: 5px 5px 10px 3px #0000008a;
     border-radius: 10px;
+    overflow: hidden;
     max-width: 800px;
 }
 
@@ -55,4 +56,11 @@ input{
 
 .price{
     color: green;
+}
+
+img {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-top: 10px;
 }
