@@ -132,10 +132,10 @@
                     <input type="text">
                 </div>
                 <div>
-                    <input type="text">
+                    <input type="text" id="phone"></input>
                 </div>
                 <div>
-                    <input type="text">
+                    <input type="email">
                 </div>
             </div>
         </div>
@@ -146,5 +146,11 @@
 
         </div>
     </div>
+    <script src="js/jquery-3.6.0.min.js"> </script>
+    <script src="js/jquery.mask.min.js"> </script>
+    <script>
+        $("#phone").mask("(99) 9999-99999");
+    </script>
+
 </body>
 </html>
