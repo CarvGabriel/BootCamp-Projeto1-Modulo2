@@ -13,18 +13,27 @@ function calc(){
     output.innerHTML = "";
     var quantities  = document.getElementsByName("quantity");
     var total = 0;
-   
+    var name = document.getElementById("name").value;
+    var formatter = new Intl.NumberFormat('pt-BR', {
+        style: 'currency',
+        currency: 'BRL',
+    });
+
+    output.innerHTML += `<div class="name">Caro ${name}</div>`;
+    output.innerHTML += `Seguem os dados do seu pedido<br><br>
+                        O seu pedido é:<br><br>`;
+
     
     for (var input of quantities) {
         var id = input.id;
 
         if (input.value != 0){
-            output.innerHTML += `Prato: ${prods[id-1].name}  - Preço unitário: R$${prods[id-1].price} 
-                                - Quantidade: ${input.value} - Total: R$${prods[id-1].price * parseFloat(input.value)} </br>`;
+            output.innerHTML += `<li>Prato: ${prods[id-1].name}  - Preço unitário: R$${formatter.format(prods[id-1].price)} 
+                                - Quantidade: ${input.value} - Total: R$${formatter.format(prods[id-1].price * parseFloat(input.value))} </li>`;
             total += prods[id-1].price * parseFloat(input.value);
         }
     }
 
-    output.innerHTML += `Preço Final R$${total}`
+    output.innerHTML += `<div class="final-price">Preço Final R$${formatter.format(total)}</div>`;
 
 } 
