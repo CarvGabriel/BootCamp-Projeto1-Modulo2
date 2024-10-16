@@ -28,12 +28,11 @@ function calc(){
         var id = input.id;
 
         if (input.value != 0){
-            output.innerHTML += `<li>Prato: ${prods[id-1].name}  - Preço unitário: R$${formatter.format(prods[id-1].price)} 
-                                - Quantidade: ${input.value} - Total: R$${formatter.format(prods[id-1].price * parseFloat(input.value))} </li>`;
+            output.innerHTML += `<li>Prato: ${prods[id-1].name}  - Preço unitário: ${formatter.format(prods[id-1].price)} 
+                                - Quantidade: ${input.value} - Total: ${formatter.format(prods[id-1].price * parseFloat(input.value))} </li>`;
             total += prods[id-1].price * parseFloat(input.value);
         }
     }
 
-    output.innerHTML += `<div class="final-price">Preço Final R$${formatter.format(total)}</div>`;
-
+    output.innerHTML += `<div class="final-price">Preço Final ${formatter.format(total)}</div>`;
 } 
