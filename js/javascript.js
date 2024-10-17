@@ -8,31 +8,39 @@ var prods = [
 ];
 
 function calc(){
-    
-    output = document.getElementById("output");
-    output.innerHTML = "";
-    var quantities  = document.getElementsByName("quantity");
-    var total = 0;
+
     var name = document.getElementById("name").value;
-    var formatter = new Intl.NumberFormat('pt-BR', {
-        style: 'currency',
-        currency: 'BRL',
-    });
+    var phone = document.getElementById("phone").value;
+    var email = document.getElementById("email").value;
+    var contInput = 0;
 
-    output.innerHTML += `<div class="name">Caro ${name}</div>`;
-    output.innerHTML += `Seguem os dados do seu pedido<br><br>
-                        O seu pedido é:<br><br>`;
+    if(name != "" && phone != "" && email != ""){
+        output = document.getElementById("output");
+        output.innerHTML = "";
+        var quantities  = document.getElementsByName("quantity");
+        var total = 0;
+        var formatter = new Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL',
+        });
 
-    
-    for (var input of quantities) {
-        var id = input.id;
+        output.innerHTML += `<div class="name">Caro ${name}</div>`;
+        output.innerHTML += `Seguem os dados do seu pedido<br><br>
+                            O seu pedido é:<br><br>`;
 
-        if (input.value != 0){
-            output.innerHTML += `<li>Prato: ${prods[id-1].name}  - Preço unitário: ${formatter.format(prods[id-1].price)} 
-                                - Quantidade: ${input.value} - Total: ${formatter.format(prods[id-1].price * parseFloat(input.value))} </li>`;
-            total += prods[id-1].price * parseFloat(input.value);
+        
+        for (var input of quantities) {
+            var id = input.id;
+
+            if (input.value != 0){
+                output.innerHTML += `<li>Prato: ${prods[id-1].name}  - Preço unitário: ${formatter.format(prods[id-1].price)} 
+                                    - Quantidade: ${input.value} - Total: ${formatter.format(prods[id-1].price * parseFloat(input.value))} </li>`;
+                total += prods[id-1].price * parseFloat(input.value);
+            }
         }
-    }
 
-    output.innerHTML += `<div class="final-price">Preço Final ${formatter.format(total)}</div>`;
+        output.innerHTML += `<div class="final-price">Preço Final ${formatter.format(total)}</div>`;
+    }
+    else
+        alert("Digite seus dados pessoais");
 } 
